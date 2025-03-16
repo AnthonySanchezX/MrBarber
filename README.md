@@ -1,3 +1,120 @@
+# Mr. Barber - Reservation System
+
+## Executive Summary
+
+### Description
+Mr. Barber is a web application designed to facilitate appointment management in a barbershop.
+It allows customers to create accounts, schedule appointments, modify details, and view their history. 
+The solution aims to prevent appointment mix-ups and provide an efficient experience for both customer and staff.
+
+### Identified Problem
+The barbershop owner mentioned issues with appointment management such as mixed reservations and difficult answering calls without a secretary. A solution was sought to simplify scheduling and improve organization.
+
+### Solution
+The implemented solution is a web page that allows customers to create accounts, schedule appointments, modify details and cancel reservations. Additionally, an admin system provides access to view future and same-day appointments.
+
+### Architecture 
+The application uses MongoDB Compass as the database to store services and appointments. It was developed in JavaScript (Node.js v18.17.0) and structured with Express.js for the backend and Tailwind CSS for the frontend.
+
+### Table of Contents
+1. [Requirements](#Requirements)
+2. [Installation](#Installation)
+3. [Configuration](#Configuration)
+4. [Usage](#Usage)
+5. [Contribution](#Contribution)
+6. [Reference Manual](#ReferenceManual)
+
+### Requirements
+- Application Servers: Node.js (v18.17.0)
+- Database: MongoDB Compass
+- PostCSS, Autoprefixer
+
+### Installation
+1. Download and install MongoDB Compass and connect to the database using the URL provided privately.
+2. Clone the repository using GitHub Desktop.
+3. Open the frontend folder and create a ".env.local" file with the required path variable provided privately.
+4. Open a terminal and access the backend folder:
+- cd /Mr.Barber/backend
+- npm install
+- npm install mongoose
+   - npm install express
+   - npm i -D nodemon
+   - npm install dotenv
+   - npm uninstall bcrypt
+   - npm install bcrypt
+   After this installations, run the backend as follows:
+   - npm run dev:postman
+5. Open a new terminal and access the frontend folder:
+   - cd /Mr.Barber/frontend
+   - npm i -D tailwindcss postcss autoprefixer
+   - npx tailwindcss init -p
+   After these installations, run the frontend as follows:
+   - npm run dev
+To run the tests manually, just follow the steps as if you were creating new appointments.
+
+### Configuration
+- Product Configuration: Configuration files in the frontend and backend folder.
+- Requirement Configuration: Settings in the database and the ".env.local" file.
+
+### Contribution
+Steps to contribute
+1. Clone the repository using GitHub Desktop.
+2. Create a new branch or select an existing one.
+3. Make changes and commit to the created branch.
+4. Submit a Pull Request and wait for the team review.
+5. Merge into the master branch
+
+## Reference Manual
+### End User
+#### Create Account
+1. Fill out the registration form.
+2. Click "Crear Cuenta".
+3. Receive a confirmation email.
+4. Open the email and click the URL to verify your account.
+
+#### Log In
+1. Access the Mr. Barber website.
+2. On the homepage, enter your verified account credentials.
+3. Click the "Iniciar Sesión" button.
+4. You will be redirected to the homepage where you can view your appointments.
+
+#### Create Appointment
+1. Click the "Nueva Cita" button.
+2. Select a maximum of 2 services.
+3. Click the "Detalles de la cita" button.
+4. Scroll down and select an available date and time.
+5. Click the "Confirmar Reservación" button.
+6. You will be redirected to the homepage where you can view your appointments.
+
+#### Modify Appointment
+1. Click the "Modificar Cita" button.
+2. Select services to change, if desired. If not, click the "Detalles de la cita" button.
+3. Select the new time or date.
+4. Click the "Confirmación Reservación".
+5. You will receive a confirmation email.
+
+#### Cancel Appointment
+1. Click the "Cancelar Cita" button.
+2. Confirm the cancellation message.
+3. You will receive a confirmation email.
+
+#### Recover Password
+1. If you forgot your password, click the "Crear contraseña" button.
+2. Enter the email address for the account you forgot the password for.
+3. You will receive an email with a link to change your password.
+4. Follow the link and change your password.
+
+### Administrator User
+#### Access as Admin
+1. Create an account as a normal user.
+2. Access MongoDB Compass and change the boolean variable for your account to make it an admin.
+
+#### Admin Features
+1. View future or same-day appointments on the main page.
+2. Cannot modify or cancel appointments made by regular users.
+3. Access the database to perform administrative operations.
+
+
 # Mr. Barber - Sistema de Reservaciones
 
 ## Resumen Ejecutivo
